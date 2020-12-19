@@ -1,144 +1,173 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@drawable/bgwallpaper"
     tools:context=".MainActivity">
 
-
     <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
-
-        <TextView
-            android:layout_width="wrap_content"
+        <RelativeLayout
+            android:layout_marginTop="32dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Dashboard"
+            android:padding="20dp"
+            >
 
-            android:fontFamily="@font/OpenSans_Bold"
-            android:textSize="24sp"
-            android:textColor="@color/black"
-            android:layout_margin="20dp">
+            <TextView
+                android:id="@+id/txtdashboard"
+                android:text="My Dashboard"
+                android:textSize="22sp"
+                android:textColor="#FFF"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_marginTop="6dp"
+                android:layout_below="@id/txtdashboard"
+                android:text="3 items"
+                android:textSize="14sp"
+                android:textColor="#FFF"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+            <ImageView
+                android:layout_alignParentRight="true"
+                android:src="@drawable/fish"
+                android:layout_width="62dp"
+                android:layout_height="62dp"/>
+
+
+        </RelativeLayout>
 
         <GridLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:rowCount="4"
             android:columnCount="2"
-            android:layout_margin="5dp"
+            android:rowCount="2"
             android:alignmentMode="alignMargins"
-            android:layout_gravity="center_horizontal"
-            android:columnOrderPreserved="false">
+            android:columnOrderPreserved="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
             <androidx.cardview.widget.CardView
-                android:layout_width="170dp"
-                android:layout_height="170dp"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="5dp"
-                app:cardBackgroundColor="@color/blue"
-                android:layout_margin="10dp">
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardElevation="6dp"
+                app:cardCornerRadius="24dp"
+                android:layout_margin="12dp"
+                >
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:gravity="center">
+                    android:padding="16dp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
                     <ImageView
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
                         android:src="@drawable/bill"
-                        android:layout_marginTop="12dp"/>
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"/>
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:textColor="#6f6f6f"
                         android:text="Bill"
-                        android:textSize="16sp"
-                        android:textColor="@color/black"
-                        android:layout_marginTop="20dp"
-                        android:fontFamily="@font/OpenSans_Regular"/>
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
 
                 </LinearLayout>
+
+
 
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:layout_width="170dp"
-                android:layout_height="170dp"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="5dp"
-                app:cardBackgroundColor="@color/blue"
-                android:layout_margin="10dp">
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardElevation="6dp"
+                app:cardCornerRadius="24dp"
+                android:layout_margin="12dp"
+                >
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:gravity="center">
+                    android:padding="16dp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
                     <ImageView
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
                         android:src="@drawable/water"
-                        android:layout_marginTop="12dp"/>
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"/>
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:textColor="#6f6f6f"
                         android:text="Water Usage"
-                        android:textSize="16sp"
-                        android:textColor="@color/black"
-                        android:layout_marginTop="20dp"
-                        android:fontFamily="@font/OpenSans_Regular"/>
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
 
                 </LinearLayout>
+
+
 
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:layout_width="170dp"
-                android:layout_height="170dp"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="5dp"
-                app:cardBackgroundColor="@color/blue"
-                android:layout_margin="10dp">
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardElevation="6dp"
+                app:cardCornerRadius="24dp"
+                android:layout_margin="12dp"
+                >
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:gravity="center">
+                    android:padding="16dp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
                     <ImageView
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
                         android:src="@drawable/discount"
-                        android:layout_marginTop="12dp"/>
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"/>
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:textColor="#6f6f6f"
                         android:text="Rebates"
-                        android:textSize="16sp"
-                        android:textColor="@color/black"
-                        android:layout_marginTop="20dp"
-                        android:fontFamily="@font/OpenSans_Regular"/>
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
 
                 </LinearLayout>
 
+
+
             </androidx.cardview.widget.CardView>
-
-
-
 
         </GridLayout>
 
-
-
-
-
     </LinearLayout>
+
+
 
 </ScrollView>
